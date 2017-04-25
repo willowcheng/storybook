@@ -28,7 +28,7 @@ export default function handle(e) {
     // Just getting the event is enough for us.
     return features.ESCAPE;
   }
-  if (focusInInput(e)) {
+  if (e.target && focusInInput(e)) {
     // if we're focused in an element that accepts input,
     // then we shouldn't perform a shortcut action
     return false;
